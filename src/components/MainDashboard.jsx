@@ -12,14 +12,17 @@ function MainDashboard() {
   return (
     
       <div className="flex">
+        
         <VerticalNavbar />
         <Routes>
+          <Route path="/Admin-dashboard" element={<AdminDashboard />} />
           <Route path="/" element={<AdminDashboard />} />
           <Route path="/devices" element={<DevicesDashboard />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="/logs" element={<FilterLogsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/devices" element={ <DevicesDashboard />} />
         </Routes>
       </div>
     

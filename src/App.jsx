@@ -8,6 +8,8 @@ import Features from "./components/features.jsx";
  
  
 import MainDashboard from "./components/MainDashboard.jsx";
+import DevicesDashboard from "./components/DevicesDashboard.jsx";
+import AdminDashboard from "./components/AdminDashboard.jsx";
  
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/features" element={<Features />} />
          <Route path="/dashboard" element={ <MainDashboard/>} />
+         {/* <Route path="//Admin-dashboard" element={  <AdminDashboard/>} /> */}
+ 
     
       </Routes>
     </Router>

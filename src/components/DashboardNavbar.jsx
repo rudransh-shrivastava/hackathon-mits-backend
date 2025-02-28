@@ -17,7 +17,7 @@ const Navbar = () => {
   const path = location.pathname;
 
   const navItems = [
-    { name: 'Dashboard', path: '/', icon:  LayoutDashboard  },
+    { name: 'Dashboard', path: '/Admin-dashboard', icon:  LayoutDashboard  },
     { name: 'Profile', path: '/profile', icon:  UserRoundPen  },
     { name: 'Devices', path: '/devices', icon:  MonitorSmartphone  },
     { name: 'Policies', path: '/policies', icon:  ShieldPlus  },

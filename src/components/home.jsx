@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import Navbar from "./navbar.jsx";
 import home from '../assets/home.jpeg';
 import Service from "../assets/OurService.jpeg"
+// import protect from "../assets/protect.png"
 // import {  Routes, Route, Link } from "react-router-dom";
 const LandingPage = () => {
  
@@ -41,26 +42,27 @@ return (
     </div>
 
     {/* Services Section */}
-    <div className="py-20 px-6 md:px-16 bg-[#151b26] h-[900px]" style = {{
-    backgroundImage: `url(${Service})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundBlendMode: "overlay",
+    <div className="py-20 px-6 md:px-16 bg-[#eaeaea] h-[900px]" style = {{
+    // backgroundImage: `url(${Service})`,
+    // backgroundRepeat: "no-repeat",
+    // backgroundSize: "cover",
+    // backgroundBlendMode: "overlay",
     }}>
+    {/* <img src="../../protect.png" className= "w-200" alt="" /> */}
     <div className="max-w-7xl mx-auto">
 
-        <h2 className="text-6xl font-bold mb-12 ml-[50%] pl-10px font-serif">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <h2 className="text-6xl font-bold mb-12 ml-[50%] pl-10px font-serif text-black">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex">
-            {/* <img
-            src="/OurService.jpeg?height=400&width=600"
+            <img
+            src="../../protect.png?height=400&width=600"
             alt="Security Shield"
             className="w-full h-auto rounded-lg"
-            /> */}
+            />
         </div>
 
         <div>
-            <p className="text-2xl mb-6">
+            <p className="text-2xl mb-6 text-black">
             ECLIPSE is a comprehensive, patent-pending security solution designed to provide maximum security and
             digital protection. Our platform combines cutting-edge policy enforcement, real-time monitoring,
             advanced threat detection, and only authorized access with immediate threat handling and response.
@@ -69,17 +71,17 @@ return (
             <ul className="space-y-4 text-2xl">
             <li className="flex items-start">
                 <span className="text-[#4182f9] mr-2">•</span>
-                <span>
+                <span className="text-black">
                 End-to-End Security Control - Unified platform for applications, databases, and network protection
                 </span>
             </li>
             <li className="flex items-start">
                 <span className="text-[#4182f9] mr-2">•</span>
-                <span>Real-Time Monitoring - Instantly detect threats and vulnerabilities</span>
+                <span className="text-black">Real-Time Monitoring - Instantly detect threats and vulnerabilities</span>
             </li>
             <li className="flex items-start">
                 <span className="text-[#4182f9] mr-2">•</span>
-                <span>Adaptive Policy Enforcement - Granular security rules that adapt to new threats</span>
+                <span className="text-black">Adaptive Policy Enforcement - Granular security rules that adapt to new threats</span>
             </li>
             </ul>
 

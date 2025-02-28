@@ -5,8 +5,8 @@ import ContactUs from "./components/contactUs.jsx";
 import Signin from "./components/signin.jsx";
 import PasswordReset from "./components/PasswordReset.jsx";
 import Features from "./components/features.jsx";
- import FilterLogsPage from "./components/FilterLogsPage.jsx";
- import ProfilePage from "./components/ProfilePage.jsx";
+ 
+ 
 import MainDashboard from "./components/MainDashboard.jsx";
 import DevicesDashboard from "./components/DevicesDashboard.jsx";
 import AdminDashboard from "./components/AdminDashboard.jsx";
@@ -31,7 +31,6 @@ function App() {
         <Route path="/login" element={<Signin />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
-        <Route path="/features" element={<Features />} />
          <Route path="/dashboard" element={ <MainDashboard/>} />
          
  

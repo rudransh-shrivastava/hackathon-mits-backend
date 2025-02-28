@@ -4,7 +4,9 @@ import { X, Filter, CircleUserRound } from 'lucide-react';
 import yt from '../assets/yt.png';
 import gpt from '../assets/gpt.png';
 import SideProfileNotification from './SideProfileNotification';
+import DeleteConfirmationPopup from './DeleteConfirmationPopup';
 const AdminDashboard = () => {
+    const [modalOpen, setModalOpen] = useState(true);
     const [summaryData, setSummaryData] = useState([
         { title: "Devices", value: 40, color: "bg-[#7d9e50]" },
         { title: "Policy Enforcement", value: 98, color: "bg-[#728b94]" },
@@ -29,14 +31,15 @@ const AdminDashboard = () => {
 
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const devicesPerPage = 5; // Number of devices per page
-
+   
     useEffect(() => {
         const fetchDevices = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://192.168.139.247:6969/api/v1/endpoints"); // Replace with your actual API URL
-                setDeviceData(prevData => [...prevData, ...response.data.endpoints]); // Merge API data with local data
+                const response = await axios.get("http://192.168.139.127:8080/api/v1/endpoints"); // Replace with your actual API URL
+                console.log(response.data)
+                setDeviceData(response.data.endpoints)
+                 // Merge API data with local data
             } catch (error) {
                 console.error("Error fetching device data:", error);
             }
@@ -46,19 +49,7 @@ const AdminDashboard = () => {
         fetchDevices();
     }, []);
 
-    // Pagination Logic
-    const indexOfLastDevice = currentPage * devicesPerPage;
-    const indexOfFirstDevice = indexOfLastDevice - devicesPerPage;
-    const currentDevices = deviceData.slice(indexOfFirstDevice, indexOfLastDevice);
-
-    const nextPage = () => {
-        if (indexOfLastDevice < deviceData.length) setCurrentPage(currentPage + 1);
-    };
-
-    const prevPage = () => {
-        if (currentPage > 1) setCurrentPage(currentPage - 1);
-    };
-
+ 
 
     return (
         <div className="ml-20 md:ml-64 p-6 w-full mt-0 bg-gray-50 min-h-screen">
@@ -116,7 +107,7 @@ const AdminDashboard = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {currentDevices.map((device, index) => (
+                                        {deviceData.map((device, index) => (
                                             <tr key={index} className="border-b">
                                                 <td className="px-4 py-3 flex items-center">
                                                     <div className="h-6 w-6 bg-gray-200 rounded-full flex items-center justify-center mr-2">
@@ -147,7 +138,8 @@ const AdminDashboard = () => {
                                                 </td>
                                                  
                                                 <td >
-                                                    <button className='bg-white py-4 px-5 rounded-lg'>Edit</button>
+                                                    <button onClick={() => setModalOpen(true)}   className='bg-white py-4 px-5 rounded-lg'>Edit</button>
+                                                     
                                                 </td>
                                             </tr>
                                         ))}
@@ -156,16 +148,8 @@ const AdminDashboard = () => {
                             </div>
                         )}
 
-                        {/* Pagination Controls */}
-                        {/* <div className="flex justify-between items-center mt-4">
-                            <button onClick={prevPage} disabled={currentPage === 1} className="px-4 py-2 bg-gray-200 rounded">
-                                Previous
-                            </button>
-                            <span>Page {currentPage}</span>
-                            <button onClick={nextPage} disabled={indexOfLastDevice >= deviceData.length} className="px-4 py-2 bg-gray-200 rounded">
-                                Next
-                            </button>
-                        </div> */}
+                     
+                         
                     </div>
                 </div>
 

@@ -2,10 +2,12 @@ import { Link } from "react-router-dom"
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import SignupPage from './signup.jsx'
 import Navbar from "./navbar.jsx";
+import home from '../assets/home.jpeg';
+import Service from "../assets/OurService.jpeg"
 // import {  Routes, Route, Link } from "react-router-dom";
 const LandingPage = () => {
  
- 
+//  const home1 = home;
 
 return (
 <div className="min-h-screen bg-[#131313] text-white">
@@ -14,7 +16,7 @@ return (
     <div
     className="relative h-screen flex items-center px-6 md:px-16"
     style={{
-        backgroundImage: "url('./assets/home.jpeg?height=1080&width=1920')",
+        backgroundImage: `url(${home})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -40,7 +42,7 @@ return (
 
     {/* Services Section */}
     <div className="py-20 px-6 md:px-16 bg-[#151b26] h-[900px]" style = {{
-    backgroundImage: "url('./assets/OurService.jpeg?height=1080&width=1920')",
+    backgroundImage: `url(${Service})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundBlendMode: "overlay",
@@ -92,7 +94,7 @@ return (
     </div>
     </div>
 
-    {/* Dashboard Preview Section */}
+    {/* Dashboard Preview Section
     <div className="py-20 px-6 md:px-16">
     <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">WEB-AXE Dashboard</h2>
@@ -108,7 +110,7 @@ return (
         />
         </div>
     </div>
-    </div>
+    </div> */}
 </div>
 )
 }

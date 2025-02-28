@@ -10,7 +10,7 @@ return (
     <div className="flex items-center">
     {/* <img src="/logo.png" alt="Eclipse Logo" className="h-15" /> */}
     <Link to="/" onClick={() => setActive("LandingPage")}>
-        <img src="./assets/logo.png" alt="Eclipse Logo" className="h-15" />
+        <img src="./logo.png" alt="Eclipse Logo" className="h-15" />
     </Link>
     </div>
 

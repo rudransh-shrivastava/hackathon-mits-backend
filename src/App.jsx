@@ -1,22 +1,38 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from "./home.jsx"; // Your home page
-import SignupPage from "./Signup.jsx";
-import ContactUs from "./contactUs.jsx";
-import Signin from "./signin.jsx";
-import PasswordReset from "./PasswordReset.jsx";
-import Features from "./features.jsx";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import LandingPage from "./components/home.jsx"; // Your home page
+import SignupPage from "./components/Signup.jsx";
+import ContactUs from "./components/contactUs.jsx";
+import Signin from "./components/signin.jsx";
+import PasswordReset from "./components/PasswordReset.jsx";
+import Features from "./components/features.jsx";
+ 
+ 
+import MainDashboard from "./components/MainDashboard.jsx";
+ 
 
 function App() {
   return (
+    <Router>
+      <nav className="flex justify-between p-4">
+        <div>
+          <Link to="/login" className="mr-4">Login</Link>
+          <Link to="/dashboard">Dashboard</Link>
+        </div>
+      </nav>
+
       <Routes>
-        <Route path="/" element={<LandingPage />} />,
-        <Route path="/signup" element={<SignupPage />} />,
-        <Route path="/home" element={<LandingPage />} />,        
-        <Route path="/login" element={<Signin/>}/>,
-        <Route path="/contactus" element= {<ContactUs/>} />,
-        <Route path="/passwordreset" element= {<PasswordReset/>} />,
-        <Route path="/features" element={<Features />} />,
+        {/* Home & Auth Routes */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/home" element={<LandingPage />} />
+        <Route path="/login" element={<Signin />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/passwordreset" element={<PasswordReset />} />
+        <Route path="/features" element={<Features />} />
+         <Route path="/dashboard" element={ <MainDashboard/>} />
+    
       </Routes>
+    </Router>
   );
 }
 

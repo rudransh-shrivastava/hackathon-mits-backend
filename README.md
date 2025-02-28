@@ -43,15 +43,14 @@ Traditional firewalls rely on static, IP-based filtering, making them ineffectiv
 - **TCP + Protocol Buffers** – Efficient firewall-backend communication.
 - **REST API & WebSockets** – Enables backend-to-frontend communication and real-time updates.
 
-## Tech Stack
+## _Tech Stack_
 
-| Component     | Used Technology                              |
-| ------------- | -------------------------------------------- | -------------------------- | --- |
+| Component     | Technology                                   |
+| ------------- | -------------------------------------------- |
 | **Backend**   | Go (Firewall Agent, Policy Management)       |
 | **Frontend**  | React (Web Dashboard)                        |
 | **Database**  | SQLite (Firewall Rules, Logs, User Activity) |
 | **Protocols** | TCP, REST API, WebSockets                    |
-| <!--          | **Encryption**                               | TLS, Cryptographic Signing | --> |
 
 ## Use Cases
 

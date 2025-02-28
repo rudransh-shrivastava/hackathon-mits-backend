@@ -1,5 +1,5 @@
  
- import {  Routes, Route } from 'react-router-dom';
+ import {  Routes, Route, Outlet } from 'react-router-dom';
  import VerticalNavbar from './DashboardNavbar.jsx';
 import AdminDashboard from './AdminDashboard.jsx';
 import DevicesDashboard from './DevicesDashboard';
@@ -15,15 +15,18 @@ function MainDashboard() {
         
         <VerticalNavbar />
         <Routes>
-          <Route path="/Admin-dashboard" element={<AdminDashboard />} />
+          {/* <Route path="/dashboard" element={<AdminDashboard />} /> */}
           <Route path="/" element={<AdminDashboard />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+
           <Route path="/devices" element={<DevicesDashboard />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="/logs" element={<FilterLogsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/devices" element={ <DevicesDashboard />} />
+           
         </Routes>
+        <Outlet/>
       </div>
     
   );

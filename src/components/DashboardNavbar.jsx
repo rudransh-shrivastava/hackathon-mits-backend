@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#f2f2f2] min-h-screen w-20 md:w-64 fixed left-0 top-0 flex flex-col">
-      <div className="flex items-center justify-center p-4 border-b border-gray-200">
+      <div className="flex items-center justify-center p-4  border-b border-gray-200">
         <div className="flex items-center">
         <Link to="/" onClick={() => setActive("LandingPage")}>
         <img src="./logo.png" alt="Eclipse Logo" className="h-15" />

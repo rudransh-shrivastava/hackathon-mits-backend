@@ -61,7 +61,7 @@ const AdminDashboard = () => {
 
 
     return (
-        <div className="ml-20 md:ml-64 p-6 bg-gray-50 min-h-screen">
+        <div className="ml-20 md:ml-64 p-6 w-full mt-0 bg-gray-50 min-h-screen">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-lg font-medium">Welcome, Adarsh</h1>
                 <SideProfileNotification />

@@ -7,7 +7,7 @@ const [active, setActive] = useState("Home");
 return (
 <nav className="bg-white shadow-md px-6 md:px-16 py-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
     {/* Logo */}
-    <div className="flex items-center">
+    <div className="flex  items-center">
     {/* <img src="/logo.png" alt="Eclipse Logo" className="h-15" /> */}
     <Link to="/" onClick={() => setActive("LandingPage")}>
         <img src="./logo.png" alt="Eclipse Logo" className="h-15" />

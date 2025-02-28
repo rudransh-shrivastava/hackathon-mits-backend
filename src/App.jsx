@@ -4,7 +4,6 @@ import SignupPage from "./components/Signup.jsx";
 import ContactUs from "./components/contactUs.jsx";
 import Signin from "./components/signin.jsx";
 import PasswordReset from "./components/PasswordReset.jsx";
-import Features from "./components/features.jsx";
  
  
 import MainDashboard from "./components/MainDashboard.jsx";
@@ -30,7 +29,6 @@ function App() {
         <Route path="/login" element={<Signin />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
-        <Route path="/features" element={<Features />} />
          <Route path="/dashboard" element={ <MainDashboard/>} />
          {/* <Route path="//Admin-dashboard" element={  <AdminDashboard/>} /> */}
  

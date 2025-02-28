@@ -83,12 +83,11 @@ return (
             </li>
             </ul>
 
-            <Link
-            to="/features"
+            <a target="blank" href="https://github.com/rudransh-shrivastava/hackathon-mits-frontend/blob/main/README.md"
             className="mt-8 border border-[#4182f9] text-[#4182f9] px-4 py-2 rounded inline-block hover:bg-[#4182f9] hover:text-white transition-colors"
             >
             Learn More
-            </Link>
+            </a>
         </div>
         </div>
     </div>

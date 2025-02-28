@@ -29,12 +29,12 @@ return (
           <Link
             to="/features"
             className={`relative ${active === "Features" ? "text-black font-semibold" : "text-gray-700"}`}
-            onClick={() => setActive("Features")}
+            onClick={() => setActive("Features")}            
           >
             Features
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="/downloads"
             className={`relative ${active === "Downloads" ? "text-black font-semibold" : "text-gray-700"}`}
@@ -42,7 +42,7 @@ return (
           >
             Downloads
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to="/contactus"

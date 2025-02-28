@@ -1,6 +1,6 @@
  
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , Outlet} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import {LayoutDashboard} from 'lucide-react'; 
 import {UserRoundPen} from 'lucide-react'; 
@@ -8,7 +8,7 @@ import {MonitorSmartphone} from 'lucide-react';
 import {ShieldPlus  } from 'lucide-react'; 
 import {GlobeLock   } from 'lucide-react'; 
 import {Settings   } from 'lucide-react'; 
-// import logo from '../assets/logo.png';
+import logo from '../assets/logo.png';
 import {LogOut} from 'lucide-react';
 
 
@@ -17,20 +17,21 @@ const Navbar = () => {
   const path = location.pathname;
 
   const navItems = [
-    { name: 'Dashboard', path: '/Admin-dashboard', icon:  LayoutDashboard  },
-    { name: 'Profile', path: '/profile', icon:  UserRoundPen  },
-    { name: 'Devices', path: '/devices', icon:  MonitorSmartphone  },
-    { name: 'Policies', path: '/policies', icon:  ShieldPlus  },
-    { name: 'Filter Logs', path: '/logs', icon:  GlobeLock  },
-    { name: 'Settings', path: '/settings', icon:  Settings  }
+    { name: 'Dashboard', path: '/dashboard/Admin-dashboard', icon:  LayoutDashboard  },
+    { name: 'Profile', path: '/dashboard/profile', icon:  UserRoundPen  },
+    { name: 'Devices', path: '/dashboard/devices', icon:  MonitorSmartphone  },
+    { name: 'Policies', path: '/dashboard/policies', icon:  ShieldPlus  },
+    { name: 'Filter Logs', path: '/dashboard/logs', icon:  GlobeLock  },
+    { name: 'Settings', path: '/dashboard/settings', icon:  Settings  }
   ];
 
   return (
-    <div className="bg-[#f2f2f2] min-h-screen w-20 md:w-64 fixed left-0 top-0 flex flex-col">
+ <>
+ <div className="bg-[#f2f2f2] min-h-screen w-20 md:w-64 fixed left-0 top-0 flex flex-col">
       <div className="flex items-center justify-center p-4  border-b border-gray-200">
         <div className="flex items-center">
         <Link to="/" onClick={() => setActive("LandingPage")}>
-        <img src="./logo.png" alt="Eclipse Logo" className="h-15" />
+        <img src={logo}  alt="Eclipse Logo" className="h-15" />
     </Link>
         </div>
       </div>
@@ -66,6 +67,9 @@ const Navbar = () => {
         </Link>
       </div>
     </div>
+
+    <Outlet/>
+          </>
   );
 };
 

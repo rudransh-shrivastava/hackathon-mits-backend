@@ -15,7 +15,7 @@ function MainDashboard() {
         
         <VerticalNavbar />
         <Routes>
-          {/* <Route path="/dashboard" element={<AdminDashboard />} /> */}
+          {/* <Route path="/ " element={<VerticalNavbar />} /> */}
           <Route path="/" element={<AdminDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
 
@@ -26,7 +26,7 @@ function MainDashboard() {
           <Route path="/settings" element={<SettingsPage />} />
            
         </Routes>
-        <Outlet/>
+        
       </div>
     
   );

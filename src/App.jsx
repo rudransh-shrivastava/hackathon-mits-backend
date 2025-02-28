@@ -4,7 +4,6 @@ import SignupPage from "./components/Signup.jsx";
 import ContactUs from "./components/contactUs.jsx";
 import Signin from "./components/signin.jsx";
 import PasswordReset from "./components/PasswordReset.jsx";
-import Features from "./components/features.jsx";
  
  
 import MainDashboard from "./components/MainDashboard.jsx";

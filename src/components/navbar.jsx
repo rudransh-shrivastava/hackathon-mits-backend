@@ -26,13 +26,13 @@ return (
           </Link>
         </li>
         <li>
-          <Link
+          <a target="blank" href = "https://github.com/rudransh-shrivastava/hackathon-mits-frontend/blob/main/README.md"
+          className={`relative ${active === "Home" ? "text-black font-semibold" : "text-gray-700"}`}>Features</a>
+          {/* <Link
             to="/features"
             className={`relative ${active === "Features" ? "text-black font-semibold" : "text-gray-700"}`}
             onClick={() => setActive("Features")}            
-          >
-            Features
-          </Link>
+          > */}
         </li>
         {/* <li>
           <Link
@@ -46,7 +46,7 @@ return (
         <li>
           <Link
             to="/contactus"
-            className={`relative ${active === "Contact Us" ? "text-black font-semibold" : "text-gray-700"}`}
+            className={`relative ${active === "Home" ? "text-black font-semibold" : "text-gray-700"}`}
             onClick={() => setActive("Contact Us")}
           >
             Contact Us
